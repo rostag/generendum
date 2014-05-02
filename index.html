@@ -4,17 +4,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Генератор референдумов alpha</title>
+    <title>Создай референдум за 1 клик - ГРУ&trade;</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
+      .paper {
+        margin-top: 1em;
+        padding: 1em 5em 1em 5em;
+        background-color: #fff;
+        border: #777 1px solid;
+      }
       .options-wrapper {
         font-size: 1.2em;
         display: none;
       }
       .list-options > .row {
         margin-top: 1em;
+      }
+      .reftitle {
+        text-align: center;
       }
       .refcell {
         background-color: #fff;
@@ -31,54 +40,76 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
-      <h1>Генератор референдумов <small>alpha</small></h1>
-      
-      <button class="btn btn-generate btn-primary"><span class="glyphicon glyphicon-star"></span> Создать референдум</button pull-right>
-      <p>Просто нажимай эту кнопку</p>
+    <div class="container-fluid">
 
-      <div class="options-wrapper">
-        <div class="row answers">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/generendum-vizi.jpg" width="190px" class="pull-right" />
+          </div>
           <div class="col-xs-8">
-          </div>
-          <div class="col-xs-4 pull-right">Ваш ответ</div>
-        </div>
-        <div class="row answers">
-          <div class="col-xs-8">
-          </div>
-          <div class="col-xs-2">Да</div>
-          <div class="col-xs-2">Нет</div>
-        </div>
-        <div class="row answers">
-          <div class="col-xs-8">
-          </div>
-          <div class="col-xs-2 glyphicon glyphicon-ok"></div>
-          <div class="col-xs-2 glyphicon glyphicon-remove"></div>
-        </div>
-        <div class="list-options">
-          <div class="row alert alert-success">
-            <div class="col-xs-8 opt1"></div>
-            <div class="col-xs-2"><div class="refcell"></div></div>
-            <div class="col-xs-2"><div class="refcell"></div></div>
-          </div>
-          <div class="row alert alert-warning">
-            <div class="col-xs-8 opt2"></div>
-            <div class="col-xs-2"><div class="refcell"></div></div>
-            <div class="col-xs-2"><div class="refcell"></div></div>
-          </div>
-          <div class="row alert alert-danger">
-            <div class="col-xs-8 opt3"></div>
-            <div class="col-xs-2"><div class="refcell"></div></div>
-            <div class="col-xs-2"><div class="refcell"></div></div>
+            <h1>Референдум<small>+<sup>alpha</sup></small></h1>
+            <p class="motivator">Создай свой собственный референдум всего за один клик!</p>
+            <button class="btn btn-generate btn-success"><span class="glyphicon glyphicon-star"></span> Создать референдум</button>
           </div>
         </div>
+        <div class="options-wrapper">
+          <div class="paper">
+            <div class="row">
+              <h2 class="reftitle">БЮЛЛЕТЕНЬ</h2>
+              <p class="reftitle">для голосования на референдуме 16 марта 2014 года</p>
+              <p>Отметьте любым знаком в квадрате тот вариант ответа, за который Вы голосуете:</p>
+            </div>
+            <div class="row answers">
+              <div class="col-xs-8">
+              </div>
+              <div class="col-xs-2">Да</div>
+              <div class="col-xs-2">Нет</div>
+            </div>
+            <div class="row answers">
+              <div class="col-xs-8">
+              </div>
+              <div class="col-xs-2 glyphicon glyphicon-ok"></div>
+              <div class="col-xs-2 glyphicon glyphicon-remove"></div>
+            </div>
+
+            <div class="list-options">
+              <div class="row alert1 alert-success1">
+                <div class="col-xs-8 opt1"></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+              </div>
+              <div class="row alert1 alert-warning1">
+                <div class="col-xs-8 opt2"></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+              </div>
+              <div class="row alert1 alert-danger1">
+                <div class="col-xs-8 opt3"></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+              </div>
+            </div><!-- .list-options -->
+            <p>&nbsp;</p>
+            <p><small><small><small>Бюллетень, в котором оставлены неотмеченными или отмечены оба варианта, считается недействительным.<br/>
+            Бюллетень изготавливается размером 210х150 мм на бумаге белого цвета.</small></small></small></p>
+          </div><!-- .paper -->
+
+          <div class="alert alert-success text-center">
+            <p class="motivator-bottom">Еще?</p>
+            <button class="btn btn-generate btn-success"><span class="glyphicon glyphicon-star"></span> Еще референдум!</button>
+          </div>
+        </div><!-- .options-wrapper -->
+
+      </div><!-- .jumbotron -->
+
+      <div class="footer pull-right text-right">
+        <small>Copyleft 2014 Генератор Референдумов Украины&trade; ГРУ&trade; <br />
+        Лицензия <a href="http://choosealicense.com/">MIT</a>
+        </small>
       </div>
-      <div class="row answers">
-        <div class="col-xs-12">
-          <img src="img/generendum-vizi.jpg" />
-        </div>
-      </div>
-    </div>
+
+    </div><!-- .container-fluid -->
 
     <script src="js/jquery-2.1.0.min.js "></script>
     <script src="js/bootstrap.min.js"></script>
