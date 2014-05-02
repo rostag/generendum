@@ -1,82 +1,118 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Generendum by rostag</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Создай референдум за 1 клик - ГРУ&trade;</title>
 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      .paper {
+        margin-top: 1em;
+        padding: 1em 5em 1em 5em;
+        background-color: #fff;
+        border: #777 1px solid;
+      }
+      .options-wrapper {
+        font-size: 1.2em;
+        display: none;
+      }
+      .list-options > .row {
+        margin-top: 1em;
+      }
+      .reftitle {
+        text-align: center;
+      }
+      .refcell {
+        background-color: #fff;
+        width: 2em;
+        height: 2em;
+        border: 1px solid #777;
+      }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
+    <div class="container-fluid">
 
-      <header>
-        <h1>Generendum</h1>
-        <p>Генератор рефендумов™</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/rostag/generendum" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/rostag/generendum/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/rostag/generendum/tarball/master" class="button">TAR</a></li>
-          </ul>
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="img/generendum-vizi.jpg" width="190px" class="pull-right" />
+          </div>
+          <div class="col-xs-8">
+            <h1>Референдум<small>+<sup>alpha</sup></small></h1>
+            <p class="motivator">Создай свой собственный референдум всего за один клик!</p>
+            <button class="btn btn-generate btn-success"><span class="glyphicon glyphicon-star"></span> Создать референдум</button>
+          </div>
         </div>
-      </div><!-- end banner -->
+        <div class="options-wrapper">
+          <div class="paper">
+            <div class="row">
+              <h2 class="reftitle">БЮЛЛЕТЕНЬ</h2>
+              <p class="reftitle">для голосования на референдуме 16 марта 2014 года</p>
+              <p>Отметьте любым знаком в квадрате тот вариант ответа, за который Вы голосуете:</p>
+            </div>
+            <div class="row answers">
+              <div class="col-xs-8">
+              </div>
+              <div class="col-xs-2">Да</div>
+              <div class="col-xs-2">Нет</div>
+            </div>
+            <div class="row answers">
+              <div class="col-xs-8">
+              </div>
+              <div class="col-xs-2 glyphicon glyphicon-ok"></div>
+              <div class="col-xs-2 glyphicon glyphicon-remove"></div>
+            </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+            <div class="list-options">
+              <div class="row alert1 alert-success1">
+                <div class="col-xs-8 opt1"></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+              </div>
+              <div class="row alert1 alert-warning1">
+                <div class="col-xs-8 opt2"></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+              </div>
+              <div class="row alert1 alert-danger1">
+                <div class="col-xs-8 opt3"></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+                <div class="col-xs-2"><div class="refcell"></div></div>
+              </div>
+            </div><!-- .list-options -->
+            <p>&nbsp;</p>
+            <p><small><small><small>Бюллетень, в котором оставлены неотмеченными или отмечены оба варианта, считается недействительным.<br/>
+            Бюллетень изготавливается размером 210х150 мм на бумаге белого цвета.</small></small></small></p>
+          </div><!-- .paper -->
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+          <div class="alert alert-success text-center">
+            <p class="motivator-bottom">Еще?</p>
+            <button class="btn btn-generate btn-success"><span class="glyphicon glyphicon-star"></span> Еще референдум!</button>
+          </div>
+        </div><!-- .options-wrapper -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+      </div><!-- .jumbotron -->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+      <div class="footer pull-right text-right">
+        <small>Copyleft 2014 Генератор Референдумов Украины&trade; ГРУ&trade; <br />
+        Лицензия <a href="http://choosealicense.com/">MIT</a>. Email: <a href="mailto:iphoria@gmail.com">iphoria@gmail.com</a>. <a href="https://github.com/rostag/generendum">Fork me on GitHub!</a>
+        </small>
+      </div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+    </div><!-- .container-fluid -->
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/rostag">rostag</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+    <script src="js/jquery-2.1.0.min.js "></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/generendum.js"></script>
   </body>
 </html>
